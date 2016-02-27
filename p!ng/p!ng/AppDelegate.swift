@@ -6,17 +6,24 @@
 //  Copyright © 2016 yakk. All rights reserved.
 //
 
-import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+        // [Optional] Power your app with Local Datastore. For more info, go to
+        // https://parse.com/docs/ios/guide#local-datastore
+        //Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("nBwD4MjaeBCuGBiQyTT0btVK3o104qWJ1RWTM98I",
+            clientKey: "Y9nokhUWTjwKu17eJA3eviPBXBp4jbnqsgWU7gAr")
+        
+        return true;
     }
 
     func applicationWillResignActive(application: UIApplication) {

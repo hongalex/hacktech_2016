@@ -16,6 +16,18 @@
 		FA1AADCF1C81B98000426B6E /* p_ngTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AADCE1C81B98000426B6E /* p_ngTests.swift */; };
 		FA1AADDA1C81B98000426B6E /* p_ngUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AADD91C81B98000426B6E /* p_ngUITests.swift */; };
 		FA1AADE81C81B9C100426B6E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AADE71C81B9C100426B6E /* DataManager.swift */; };
+		FA1AADEB1C81C3EB00426B6E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADE91C81C3EB00426B6E /* Bolts.framework */; };
+		FA1AADEC1C81C3EB00426B6E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADEA1C81C3EB00426B6E /* Parse.framework */; };
+		FA1AADEF1C81C43900426B6E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADEE1C81C43900426B6E /* AudioToolbox.framework */; };
+		FA1AADF11C81C44600426B6E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADF01C81C44600426B6E /* CoreGraphics.framework */; };
+		FA1AADF31C81C47300426B6E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADF21C81C47300426B6E /* libsqlite3.tbd */; };
+		FA1AADF51C81C47F00426B6E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADF41C81C47F00426B6E /* CFNetwork.framework */; };
+		FA1AADF71C81C48800426B6E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADF61C81C48800426B6E /* CoreLocation.framework */; };
+		FA1AADF91C81C48F00426B6E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADF81C81C48F00426B6E /* QuartzCore.framework */; };
+		FA1AADFB1C81C49500426B6E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADFA1C81C49500426B6E /* Security.framework */; };
+		FA1AADFD1C81C49C00426B6E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADFC1C81C49C00426B6E /* StoreKit.framework */; };
+		FA1AADFF1C81C4A400426B6E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADFE1C81C4A400426B6E /* SystemConfiguration.framework */; };
+		FA1AAE011C81C4AA00426B6E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AAE001C81C4AA00426B6E /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +63,18 @@
 		FA1AADD91C81B98000426B6E /* p_ngUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p_ngUITests.swift; sourceTree = "<group>"; };
 		FA1AADDB1C81B98000426B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA1AADE71C81B9C100426B6E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		FA1AADE91C81C3EB00426B6E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		FA1AADEA1C81C3EB00426B6E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		FA1AADEE1C81C43900426B6E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FA1AADF01C81C44600426B6E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FA1AADF21C81C47300426B6E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		FA1AADF41C81C47F00426B6E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FA1AADF61C81C48800426B6E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FA1AADF81C81C48F00426B6E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FA1AADFA1C81C49500426B6E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FA1AADFC1C81C49C00426B6E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FA1AADFE1C81C4A400426B6E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FA1AAE001C81C4AA00426B6E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +82,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1AAE011C81C4AA00426B6E /* libz.tbd in Frameworks */,
+				FA1AADFF1C81C4A400426B6E /* SystemConfiguration.framework in Frameworks */,
+				FA1AADFD1C81C49C00426B6E /* StoreKit.framework in Frameworks */,
+				FA1AADFB1C81C49500426B6E /* Security.framework in Frameworks */,
+				FA1AADF91C81C48F00426B6E /* QuartzCore.framework in Frameworks */,
+				FA1AADF71C81C48800426B6E /* CoreLocation.framework in Frameworks */,
+				FA1AADF51C81C47F00426B6E /* CFNetwork.framework in Frameworks */,
+				FA1AADF31C81C47300426B6E /* libsqlite3.tbd in Frameworks */,
+				FA1AADF11C81C44600426B6E /* CoreGraphics.framework in Frameworks */,
+				FA1AADEF1C81C43900426B6E /* AudioToolbox.framework in Frameworks */,
+				FA1AADEC1C81C3EB00426B6E /* Parse.framework in Frameworks */,
+				FA1AADEB1C81C3EB00426B6E /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +121,7 @@
 				FA1AADCD1C81B98000426B6E /* p!ngTests */,
 				FA1AADD81C81B98000426B6E /* p!ngUITests */,
 				FA1AADB51C81B98000426B6E /* Products */,
+				FA1AADED1C81C40000426B6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +166,25 @@
 				FA1AADDB1C81B98000426B6E /* Info.plist */,
 			);
 			path = "p!ngUITests";
+			sourceTree = "<group>";
+		};
+		FA1AADED1C81C40000426B6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA1AAE001C81C4AA00426B6E /* libz.tbd */,
+				FA1AADFE1C81C4A400426B6E /* SystemConfiguration.framework */,
+				FA1AADFC1C81C49C00426B6E /* StoreKit.framework */,
+				FA1AADFA1C81C49500426B6E /* Security.framework */,
+				FA1AADF81C81C48F00426B6E /* QuartzCore.framework */,
+				FA1AADF61C81C48800426B6E /* CoreLocation.framework */,
+				FA1AADF41C81C47F00426B6E /* CFNetwork.framework */,
+				FA1AADF21C81C47300426B6E /* libsqlite3.tbd */,
+				FA1AADF01C81C44600426B6E /* CoreGraphics.framework */,
+				FA1AADEE1C81C43900426B6E /* AudioToolbox.framework */,
+				FA1AADE91C81C3EB00426B6E /* Bolts.framework */,
+				FA1AADEA1C81C3EB00426B6E /* Parse.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +465,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "p!ng/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yakk.p-ng";
@@ -421,6 +481,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "p!ng/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yakk.p-ng";
