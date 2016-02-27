@@ -17,6 +17,7 @@ class DataManager {
     private init() {};
     
     
+    
     func createHome(completion : (successful : Bool) -> Void) {
         var home = PFObject(className:"Home")
         
@@ -37,7 +38,7 @@ class DataManager {
         
     }
     
-    func getInvitedHomes(completion : (successful : Bool) -> Void) {
+    func getInvitedHomes(completion : (successful : [PFObject]) -> Void) {
         
     }
 
@@ -50,9 +51,23 @@ class DataManager {
         
     }
     
+    func getRoommates(completion : (successful : [PFObject]) -> Void) {
+        
+    }
+    
     
     //send a message using the MessageType's object ID
     func createMessage(messageID : NSString, completion : (successful : Bool) -> Void) {
+        
+    }
+    
+    //Get the available message options to display
+    func getMessageType(completion : (successful : [PFObject]) -> Void) {
+        
+    }
+    
+    
+    func getMessages(completion : (successful : [PFObject]) -> Void) {
         
     }
     
