@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A5B0C1F1C81CC1C00C54FA5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5B0C1E1C81CC1C00C54FA5 /* libz.dylib */; };
-		0A5B0C211C81CC3300C54FA5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5B0C201C81CC3300C54FA5 /* libsqlite3.dylib */; };
 		FA1AADB81C81B98000426B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AADB71C81B98000426B6E /* AppDelegate.swift */; };
 		FA1AADBA1C81B98000426B6E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AADB91C81B98000426B6E /* FirstViewController.swift */; };
 		FA1AADBC1C81B98000426B6E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AADBB1C81B98000426B6E /* SecondViewController.swift */; };
@@ -28,6 +26,8 @@
 		FA1AADFB1C81C49500426B6E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADFA1C81C49500426B6E /* Security.framework */; };
 		FA1AADFD1C81C49C00426B6E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADFC1C81C49C00426B6E /* StoreKit.framework */; };
 		FA1AADFF1C81C4A400426B6E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADFE1C81C4A400426B6E /* SystemConfiguration.framework */; };
+		FA1AAE021C81CF1200426B6E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AAE001C81C4AA00426B6E /* libz.tbd */; };
+		FA1AAE031C81CF1A00426B6E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADF21C81C47300426B6E /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,8 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A5B0C211C81CC3300C54FA5 /* libsqlite3.dylib in Frameworks */,
-				0A5B0C1F1C81CC1C00C54FA5 /* libz.dylib in Frameworks */,
+				FA1AAE031C81CF1A00426B6E /* libsqlite3.tbd in Frameworks */,
+				FA1AAE021C81CF1200426B6E /* libz.tbd in Frameworks */,
 				FA1AADFF1C81C4A400426B6E /* SystemConfiguration.framework in Frameworks */,
 				FA1AADFD1C81C49C00426B6E /* StoreKit.framework in Frameworks */,
 				FA1AADFB1C81C49500426B6E /* Security.framework in Frameworks */,

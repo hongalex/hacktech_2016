@@ -33,10 +33,28 @@ class DataManager {
         }
     }
     
-    func inviteEmailToHome(NSString email, completion : (successful : Bool) -> Void) {
+    func inviteEmailToHome(email : NSString, completion : (successful : Bool) -> Void) {
+        
+    }
+    
+    func getInvitedHomes(completion : (successful : Bool) -> Void) {
         
     }
 
+    //pass in Home's objectID for this function
+    func joinHome(homeID : NSString, completion : (successful : Bool) -> Void) {
+        
+    }
+    
+    func leaveHome(completion : (successful : Bool) -> Void) {
+        
+    }
+    
+    
+    //send a message using the MessageType's object ID
+    func createMessage(messageID : NSString, completion : (successful : Bool) -> Void) {
+        
+    }
     
     
     /*void Login(String email, String password)
