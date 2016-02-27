@@ -6,7 +6,7 @@ Users in the same "house" can send simple "ping" messages, which is a simple ico
 as a reminder to perform an action (eg. Take out trash, clean your dishes, wipe floors...) 
 
 Collaborators-
-Y una Lee (yunalee22)
-A lex Hong (hongalex)
-K evin Wu (kwu135)
+Y una Lee (yunalee22) <br />
+A lex Hong (hongalex) <br />
+K evin Wu (kwu135) <br />
 K yle Tan (ktan422)
