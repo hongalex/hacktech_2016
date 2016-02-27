@@ -17,7 +17,7 @@ class DataManager {
     private init() {};
     
     
-    func createHome(completion:(created: Bool)-> Void) {
+    func createHome(completion : (successful : Bool) -> Void) {
         var home = PFObject(className:"Home")
         
         let relation = home.relationForKey("users")
@@ -26,14 +26,16 @@ class DataManager {
         home.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             if(success) {
-                completion(created : true)
+                completion(successful : true)
             } else {
-                completion(created : false)
+                completion(successful : false)
             }
         }
     }
     
-    
+    func inviteEmailToHome(NSString email, completion : (successful : Bool) -> Void) {
+        
+    }
 
     
     

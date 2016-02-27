@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5B0C1F1C81CC1C00C54FA5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5B0C1E1C81CC1C00C54FA5 /* libz.dylib */; };
+		0A5B0C211C81CC3300C54FA5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5B0C201C81CC3300C54FA5 /* libsqlite3.dylib */; };
 		FA1AADB81C81B98000426B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AADB71C81B98000426B6E /* AppDelegate.swift */; };
 		FA1AADBA1C81B98000426B6E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AADB91C81B98000426B6E /* FirstViewController.swift */; };
 		FA1AADBC1C81B98000426B6E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AADBB1C81B98000426B6E /* SecondViewController.swift */; };
@@ -20,14 +22,12 @@
 		FA1AADEC1C81C3EB00426B6E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADEA1C81C3EB00426B6E /* Parse.framework */; };
 		FA1AADEF1C81C43900426B6E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADEE1C81C43900426B6E /* AudioToolbox.framework */; };
 		FA1AADF11C81C44600426B6E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADF01C81C44600426B6E /* CoreGraphics.framework */; };
-		FA1AADF31C81C47300426B6E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADF21C81C47300426B6E /* libsqlite3.tbd */; };
 		FA1AADF51C81C47F00426B6E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADF41C81C47F00426B6E /* CFNetwork.framework */; };
 		FA1AADF71C81C48800426B6E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADF61C81C48800426B6E /* CoreLocation.framework */; };
 		FA1AADF91C81C48F00426B6E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADF81C81C48F00426B6E /* QuartzCore.framework */; };
 		FA1AADFB1C81C49500426B6E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADFA1C81C49500426B6E /* Security.framework */; };
 		FA1AADFD1C81C49C00426B6E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADFC1C81C49C00426B6E /* StoreKit.framework */; };
 		FA1AADFF1C81C4A400426B6E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AADFE1C81C4A400426B6E /* SystemConfiguration.framework */; };
-		FA1AAE011C81C4AA00426B6E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AAE001C81C4AA00426B6E /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A5B0C1E1C81CC1C00C54FA5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		0A5B0C201C81CC3300C54FA5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		FA1AADB41C81B98000426B6E /* p!ng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "p!ng.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1AADB71C81B98000426B6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA1AADB91C81B98000426B6E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +64,7 @@
 		FA1AADD51C81B98000426B6E /* p!ngUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "p!ngUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1AADD91C81B98000426B6E /* p_ngUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p_ngUITests.swift; sourceTree = "<group>"; };
 		FA1AADDB1C81B98000426B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA1AADE71C81B9C100426B6E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		FA1AADE71C81B9C100426B6E /* DataManager.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; path = DataManager.swift; sourceTree = "<group>"; };
 		FA1AADE91C81C3EB00426B6E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		FA1AADEA1C81C3EB00426B6E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		FA1AADEE1C81C43900426B6E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -82,14 +84,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA1AAE011C81C4AA00426B6E /* libz.tbd in Frameworks */,
+				0A5B0C211C81CC3300C54FA5 /* libsqlite3.dylib in Frameworks */,
+				0A5B0C1F1C81CC1C00C54FA5 /* libz.dylib in Frameworks */,
 				FA1AADFF1C81C4A400426B6E /* SystemConfiguration.framework in Frameworks */,
 				FA1AADFD1C81C49C00426B6E /* StoreKit.framework in Frameworks */,
 				FA1AADFB1C81C49500426B6E /* Security.framework in Frameworks */,
-				FA1AADF91C81C48F00426B6E /* QuartzCore.framework in Frameworks */,
 				FA1AADF71C81C48800426B6E /* CoreLocation.framework in Frameworks */,
+				FA1AADF91C81C48F00426B6E /* QuartzCore.framework in Frameworks */,
 				FA1AADF51C81C47F00426B6E /* CFNetwork.framework in Frameworks */,
-				FA1AADF31C81C47300426B6E /* libsqlite3.tbd in Frameworks */,
 				FA1AADF11C81C44600426B6E /* CoreGraphics.framework in Frameworks */,
 				FA1AADEF1C81C43900426B6E /* AudioToolbox.framework in Frameworks */,
 				FA1AADEC1C81C3EB00426B6E /* Parse.framework in Frameworks */,
@@ -171,6 +173,8 @@
 		FA1AADED1C81C40000426B6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A5B0C201C81CC3300C54FA5 /* libsqlite3.dylib */,
+				0A5B0C1E1C81CC1C00C54FA5 /* libz.dylib */,
 				FA1AAE001C81C4AA00426B6E /* libz.tbd */,
 				FA1AADFE1C81C4A400426B6E /* SystemConfiguration.framework */,
 				FA1AADFC1C81C49C00426B6E /* StoreKit.framework */,
@@ -559,6 +563,7 @@
 				FA1AADE01C81B98000426B6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA1AADE11C81B98000426B6E /* Build configuration list for PBXNativeTarget "p!ngTests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +572,7 @@
 				FA1AADE31C81B98000426B6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA1AADE41C81B98000426B6E /* Build configuration list for PBXNativeTarget "p!ngUITests" */ = {
 			isa = XCConfigurationList;
@@ -575,6 +581,7 @@
 				FA1AADE61C81B98000426B6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
