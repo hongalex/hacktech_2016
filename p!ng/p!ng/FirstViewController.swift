@@ -72,7 +72,7 @@ class FirstViewController: UIViewController {
         /*DataManager.sharedInstance.loginUser("myUsername", password: "myPassword", completion: {successful in
             print(successful)
             
-        })*/
+        })
         
         
         
@@ -85,16 +85,7 @@ class FirstViewController: UIViewController {
 
             })
 
-        })
-        
-        
-        
-        
-        
-
-        
-        
-
+        })*/
         
     }
 
