@@ -40,17 +40,78 @@ class DataManager {
     
     private init() {};
     
+    
+    /**
+     * @method registerUser
+     *
+     * Creates a User object on the parse database.
+     *
+     * @param email- Email of the user 
+     * @param password- Password of the user
+     * @param firstName- User's first name
+     * @param lastName- User's last name
+     *
+     */
+    func registerUser(email: NSString, password: NSString, firstName: NSString, lastName: NSString, completion: (successful : Bool) -> Void) {
+        let user = PFUser()
+        user.username = email as String
+        user.email = email as String
+        user.password = password as String
+        user["firstName"] = firstName as String
+        user["lastName"] = lastName as String
+        
+        user.signUpInBackgroundWithBlock {
+            (succeeded: Bool, error: NSError?) -> Void in
+            if let error = error {
+                let errorString = error.userInfo["error"] as? NSString
+                completion(successful : false)
+                print (errorString);
+            } else {
+                // Hooray! Let them use the app now.
+                completion(successful : true)
+
+            }
+        }
+    }
+    
+    /**
+     * @method loginUser
+     *
+     * Log in a user with the given credentials.
+     *
+     * @param email- Email of the user
+     * @param password- Password of the user
+     *
+     */
+    func loginUser(email: NSString, password: NSString, completion: (successful: Bool) -> Void) {
+        PFUser.logInWithUsernameInBackground(email as String, password: password as String) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if user != nil {
+                // Do stuff after successful login.
+                completion(successful : true)
+            } else {
+                // The login failed. Check error to see why.
+                completion(successful : false)
+
+            }
+        }
+    }
+    
+    
+    
     /**
      * @method createHome
      *
      * Creates a Home object on the Parse DB. Adds the current user to that home.
      *
+     * @param A String that describes the address of the house
      * @param A completion handler that takes in whether the method was successfully run
      */
-    func createHome(completion : (successful : Bool) -> Void) {
+    func createHome(name: NSString, completion : (successful : Bool) -> Void) {
         let home = PFObject(className:"Home")
-        let relation = home.relationForKey("users")
+        home["name"] = name as String;
         
+        let relation = home.relationForKey("users")
         relation.addObject(PFUser.currentUser()!)
         home.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
@@ -63,12 +124,34 @@ class DataManager {
     }
     
     /**
+     * @method getHome
+     *
+     * Returns the current user's home 
+     *
+     * @param A completion handler that takes in the home PFObject and updates the view with it
+     */
+    func getHomeName(completion: (home : PFObject?) -> Void) {
+        let homeQuery = PFQuery(className: "Home")
+        homeQuery.whereKey("users", equalTo:PFUser.currentUser()!)
+        homeQuery.getFirstObjectInBackgroundWithBlock {
+            (object : PFObject?, error: NSError?) -> Void in
+            if error == nil {
+                completion(home: object!)
+            } else {
+                completion(home: nil)
+            }
+        }
+    }
+    
+    
+    /**
      * @method inviteEmailToHome
      *
      * Adds an email to the invite list of the home allowing users with that email to
      * join the home
      *
-     * @param NSString of the email that wants to be invited, A completion handler that takes in whether the method was successfully run
+     * @param NSString of the email that wants to be invited
+     * @param A completion handler that takes in whether the method was successfully run
      */
     func inviteEmailToHome(email : NSString, completion : (successful : Bool) -> Void) {
         let homeQuery = PFQuery(className: "Home")
@@ -119,8 +202,8 @@ class DataManager {
      * @param Home PFObject that user is joining, A completion handler that takes in whether the method was successfully run
      */
     func joinHome(home : PFObject, completion : (successful : Bool) -> Void) {
-        let homeQuery = PFQuery(className: "Home")
-        homeQuery.whereKey("objectId", equalTo: home["objectid"])
+        /*let homeQuery = PFQuery(className: "Home")
+        homeQuery.whereKey("objectId", equalTo: home["objectId"])
         homeQuery.getFirstObjectInBackgroundWithBlock {
             (object: PFObject?, error: NSError?) -> Void in
             if error != nil || object == nil {
@@ -137,7 +220,18 @@ class DataManager {
                     }
                 }
             }
+        }*/
+        let relation = home.relationForKey("users")
+        relation.addObject(PFUser.currentUser()!)
+        home.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if(success) {
+                completion(successful : true)
+            } else {
+                completion(successful : false)
+            }
         }
+
     }
     
     /**
@@ -185,9 +279,14 @@ class DataManager {
                 completion(roommates : nil)
             } else {
                 let relation = object!.relationForKey("users")
-                relation.query().whereKey("objectId", notEqualTo: PFUser.currentUser()!["objectId"])
+
                 relation.query().findObjectsInBackgroundWithBlock {
-                    (objects : [PFObject]?, error: NSError?) -> Void in
+                    (var objects : [PFObject]?, error: NSError?) -> Void in
+                    for user in objects! {
+                        if(user.objectId == PFUser.currentUser()!.objectId) {
+                            objects!.removeAtIndex(objects!.indexOf(user)!)
+                        }
+                    }
                     if error == nil {
                         completion(roommates: objects)
                     } else {
