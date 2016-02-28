@@ -1,35 +1,21 @@
 //
-//  createOrJoinHouseVCViewController.swift
+//  SettingsViewController.swift
 //  p!ng
 //
-//  Created by Kyle Tan on 2/27/16.
+//  Created by Yuna Lee on 2/27/16.
 //  Copyright © 2016 yakk. All rights reserved.
 //
 
 import UIKit
 
+class SettingsViewController: UIViewController {
 
-
-class createOrJoinHouseVCViewController: UIViewController {
-
-    @IBOutlet weak var createButtonView: UIView!
-    @IBOutlet weak var joinButtonView: UIView!
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationItem.setHidesBackButton(true, animated:false)
-        
-        createButtonView.layer.cornerRadius = 10;
-        createButtonView.layer.masksToBounds = true;
-        
-        joinButtonView.layer.cornerRadius = 10;
-        joinButtonView.layer.masksToBounds = true;
     }
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -24,7 +24,7 @@ class CreateAccountViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        self.navigationItem.setHidesBackButton(true, animated:false)
         
         
         //button view
@@ -37,6 +37,23 @@ class CreateAccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func RegisterClicked(sender: AnyObject) {
+        if(passwordTF.text==verifyPWTF.text) {
+            DataManager.sharedInstance.registerUser(emailTF.text!, password: passwordTF.text!, firstName: firstNameTF.text!, lastName: lastNameTF.text!, completion:{ success in
+                if(success) {
+                    self.performSegueWithIdentifier("RegisterSegue", sender: sender)
+                } else {
+                    self.emailTF.text="";
+                    self.passwordTF.text="";
+                    self.verifyPWTF.text="";
+                }
+                
+            })
+        } else {
+            self.passwordTF.text="";
+            self.verifyPWTF.text="";
+        }
+    }
 
     /*
     // MARK: - Navigation

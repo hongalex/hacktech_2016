@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
 
@@ -14,12 +15,33 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: pingTextField!
     @IBOutlet weak var buttonView: UIView!
     
+    override func viewDidAppear(animated: Bool) {
+        if (PFUser.currentUser() != nil) {
+            DataManager.sharedInstance.getHome({home in
+                if (home != nil) {
+                    self.performSegueWithIdentifier("dashboardSegue", sender: self)
+                } else {
+                    self.performSegueWithIdentifier("LoginSegue", sender: self)
+                }
+            })
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
         //button view
         buttonView.layer.cornerRadius = 10;
         buttonView.layer.masksToBounds = true;
+        
+        /*if (self.navigationItem.leftBarButtonItem != nil) {
+            self.navigationItem.leftBarButtonItem!.enabled = false
+        }*/
+        self.navigationController?.setNavigationBarHidden(self.navigationController?.navigationBarHidden == false, animated: true)
+        self.navigationItem.setHidesBackButton(true, animated:false)
+        if (self.tabBarController != nil) {
+            self.tabBarController!.tabBar.hidden = true
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +50,21 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func LoginClicked(sender: AnyObject) {
+        DataManager.sharedInstance.loginUser(emailTextField.text!,password: passwordTextField.text!, completion: {successful in
+            if(successful) {
+                DataManager.sharedInstance.getHome({home in
+                    if (home != nil) {
+                        self.performSegueWithIdentifier("dashboardSegue", sender: self)
+                    } else {
+                        self.performSegueWithIdentifier("LoginSegue", sender: self)
+                    }
+                })
+            } else {
+                self.passwordTextField.text="";
+            }
+        })
+    }
 
     /*
     // MARK: - Navigation

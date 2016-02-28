@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import Parse
 
 class JoinHomeViewController: UIViewController {
 
     @IBOutlet weak var homeTableView: UITableView!
     @IBOutlet weak var redView: UIView!
     
-    var houseNames : [String] = ["Test1","Test2","Test3"]//put shit here for display in the table
-    var selectedName : String = "";
+    var homes : [PFObject] = [];
+    //var houseNames : [String] = [];// = ["Test1","Test2","Test3"]//put shit here for display in the table
+    var selectedName : String = ""
+    var selectedIndex : Int = -1
+    
+    @IBAction func joinHome(sender: AnyObject) {
+        if (selectedIndex >= 0) {
+            DataManager.sharedInstance.joinHome(homes[selectedIndex], completion: {successful in
+                if (successful) {
+                    self.performSegueWithIdentifier("joinHomeSegue", sender: self)
+                }
+            })
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +36,13 @@ class JoinHomeViewController: UIViewController {
         redView.layer.masksToBounds = true;
         
         homeTableView.backgroundColor = UIColor.clearColor()
-
+        
+        DataManager.sharedInstance.getInvitedHomes({homes in
+            self.homes = homes!;
+            self.homeTableView.reloadData();
+        })
         // Do any additional setup after loading the view.
+        self.navigationItem.setHidesBackButton(true, animated:false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +52,7 @@ class JoinHomeViewController: UIViewController {
     
     func tableView(tableView:UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return houseNames.count
+        return homes.count
     }
     
     func numberOfSectionsInTableView(tableView:UITableView) -> Int {
@@ -47,13 +65,13 @@ class JoinHomeViewController: UIViewController {
         
         let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath) as UITableViewCell
         
-        let name = self.houseNames[indexPath.row]
+        let name = self.homes[indexPath.row]["name"] as! String?
         cell.textLabel!.text = name
         cell.backgroundColor = UIColor.clearColor();
        
         cell.textLabel?.textAlignment = NSTextAlignment.Right;
         cell.textLabel?.textAlignment = NSTextAlignment.Left;
-        cell.textLabel?.font = cell.textLabel?.font.fontWithSize(10);
+        cell.textLabel?.font = cell.textLabel?.font.fontWithSize(16);
         
         return cell
     }
@@ -63,7 +81,8 @@ class JoinHomeViewController: UIViewController {
         //let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath) as UITableViewCell
         
         // Configure the cell...
-        selectedName = self.houseNames[indexPath.row]
+        selectedIndex = indexPath.row
+        selectedName = (self.homes[indexPath.row]["name"] as! String?)!
         
         /*cell.textLabel?.text = newBookCell
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
