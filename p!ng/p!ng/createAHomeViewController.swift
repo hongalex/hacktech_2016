@@ -28,6 +28,11 @@ class createAHomeViewController: UIViewController {
         redView.layer.cornerRadius = 10;
         redView.layer.masksToBounds = true;
         
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+
+        
     }
 
     @IBAction func addEmail(sender: AnyObject) {
@@ -43,6 +48,13 @@ class createAHomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+
     
     func tableView(tableView:UITableView, numberOfRowsInSection section: Int) -> Int {
         

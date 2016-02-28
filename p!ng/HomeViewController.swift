@@ -19,6 +19,13 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         //Segue to a view with a text label
         //and a list
     }
+    @IBAction func leaveHome(sender: AnyObject) {
+        DataManager.sharedInstance.leaveHome({ successful in
+            if (successful) {
+                self.performSegueWithIdentifier("leaveHomeSegue", sender: self)
+            }
+        })
+    }
     
     let reuseIdentifier = "cell"
     var roommates : [PFObject]? = nil

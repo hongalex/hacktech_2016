@@ -27,6 +27,12 @@ class createOrJoinHouseVCViewController: UIViewController {
         
         joinButtonView.layer.cornerRadius = 10;
         joinButtonView.layer.masksToBounds = true;
+        
+        self.navigationController?.setNavigationBarHidden(self.navigationController?.navigationBarHidden == false, animated: true)
+        self.navigationItem.setHidesBackButton(true, animated:false)
+        if (self.tabBarController != nil) {
+            self.tabBarController!.tabBar.hidden = true
+        }
     }
     
     

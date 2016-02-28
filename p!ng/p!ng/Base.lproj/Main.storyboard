@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Gf-cz-gec">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Gf-cz-gec">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -50,14 +50,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoYellow" translatesAutoresizingMaskIntoConstraints="NO" id="S2O-gO-s79">
                                 <rect key="frame" x="189.5" y="90" width="221" height="118"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email" translatesAutoresizingMaskIntoConstraints="NO" id="cIW-jB-Kng">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="cIW-jB-Kng">
                                 <rect key="frame" x="30" y="250" width="32" height="32"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D9w-Dn-A0L" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
                                 <rect key="frame" x="72" y="247" width="468" height="30"/>
                                 <color key="textColor" red="0.91919191919999998" green="0.91919191919999998" blue="0.91919191919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                         <color key="value" white="0.84999999999999998" alpha="1" colorSpace="calibratedWhite"/>
@@ -129,7 +129,7 @@
                                 <rect key="frame" x="72" y="307" width="468" height="30"/>
                                 <color key="textColor" red="0.91919191920606069" green="0.91919191920606069" blue="0.91919191920606069" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                         <color key="value" white="0.84999999999999998" alpha="1" colorSpace="calibratedWhite"/>
@@ -244,7 +244,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserSmall" translatesAutoresizingMaskIntoConstraints="NO" id="eAQ-xw-XlA">
                                 <rect key="frame" x="30" y="182" width="35" height="32"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email" translatesAutoresizingMaskIntoConstraints="NO" id="gWU-0d-biQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="gWU-0d-biQ">
                                 <rect key="frame" x="30" y="234" width="35" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="eUM-Y1-Nj9"/>
@@ -615,7 +615,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qrg-R5-meQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qrg-R5-meQ">
                                 <rect key="frame" x="255.5" y="94" width="89" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="pbO-1v-jfn"/>
@@ -631,14 +631,14 @@
                                     <fragment content="Clean up">
                                         <attributes>
                                             <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="Lato-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdH-X0-MiM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdH-X0-MiM">
                                 <rect key="frame" x="384.5" y="94" width="89" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="8si-uM-aW5"/>
@@ -648,7 +648,7 @@
                                     <action selector="dishButton:" destination="sS0-la-Ddd" eventType="touchUpInside" id="3Bu-4m-WzU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbG-cZ-yQ4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbG-cZ-yQ4">
                                 <rect key="frame" x="126.5" y="94" width="89" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="3iK-eq-RgZ"/>
@@ -667,7 +667,7 @@
                                     <fragment content="Do your              dishes">
                                         <attributes>
                                             <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="Lato-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -683,14 +683,14 @@
                                     <fragment content="Take out                 the trash">
                                         <attributes>
                                             <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="Lato-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDa-6t-Tat">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDa-6t-Tat">
                                 <rect key="frame" x="255.5" y="243" width="89" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="fb2-Eg-DGb"/>
@@ -700,7 +700,7 @@
                                     <action selector="volumeButton:" destination="sS0-la-Ddd" eventType="touchUpInside" id="rFI-N1-MMx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAt-qa-yfo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAt-qa-yfo">
                                 <rect key="frame" x="243.5" y="335" width="113" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="113" id="nbX-Eu-xgg"/>
@@ -709,14 +709,14 @@
                                     <fragment content="Lower the       volume">
                                         <attributes>
                                             <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="Lato-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wp-gW-awP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wp-gW-awP">
                                 <rect key="frame" x="384.5" y="244" width="89" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="iOp-gI-ykh"/>
@@ -726,7 +726,7 @@
                                     <action selector="toiletButton:" destination="sS0-la-Ddd" eventType="touchUpInside" id="jBS-SU-k2i"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vx-qP-4dA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vx-qP-4dA">
                                 <rect key="frame" x="126.5" y="245" width="89" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="ZiO-VI-AC8"/>
@@ -736,7 +736,7 @@
                                     <action selector="fridgeButton:" destination="sS0-la-Ddd" eventType="touchUpInside" id="Ft0-OQ-hOX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaA-kf-3Gv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaA-kf-3Gv">
                                 <rect key="frame" x="370.5" y="336" width="106" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="106" id="T4S-xW-0BG"/>
@@ -745,14 +745,14 @@
                                     <fragment content="Clean the    bathroom">
                                         <attributes>
                                             <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="Lato-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhq-xW-Ux7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhq-xW-Ux7">
                                 <rect key="frame" x="104.5" y="337" width="124" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="Oec-Bf-4pY"/>
@@ -761,14 +761,14 @@
                                     <fragment content="Clean out               the fridge">
                                         <attributes>
                                             <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="Lato-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKr-4f-Pka">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKr-4f-Pka">
                                 <rect key="frame" x="255.5" y="384" width="89" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="fPx-sT-Ekr"/>
@@ -778,7 +778,7 @@
                                     <action selector="keyButton:" destination="sS0-la-Ddd" eventType="touchUpInside" id="xX4-Z7-iOZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coJ-NV-LbI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coJ-NV-LbI">
                                 <rect key="frame" x="248" y="476" width="104" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="hI4-H4-CXT"/>
@@ -787,7 +787,7 @@
                                     <fragment content="Help, I'm           Locked Out!">
                                         <attributes>
                                             <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="Lato-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -823,7 +823,7 @@
                                     <fragment content="Pay your                        bill">
                                         <attributes>
                                             <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="Lato-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -839,7 +839,7 @@
                                     <fragment content="Out of toilet       paper">
                                         <attributes>
                                             <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="Lato-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -913,7 +913,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingCell" id="Lc9-5b-V4I">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lc9-5b-V4I" id="TTH-bg-LfW">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -954,14 +954,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="HomeLargeBlue" translatesAutoresizingMaskIntoConstraints="NO" id="Q3k-Gl-JRh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeLargeBlue" translatesAutoresizingMaskIntoConstraints="NO" id="Q3k-Gl-JRh">
                                 <rect key="frame" x="251" y="89" width="99" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="81" id="cnI-34-YtB"/>
                                     <constraint firstAttribute="width" constant="99" id="khT-nc-o8t"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsU-ef-0Sn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsU-ef-0Sn">
                                 <rect key="frame" x="246" y="178" width="108" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Y2t-fK-sdY"/>
@@ -971,7 +971,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Roommates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6A2-9b-AgD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roommates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6A2-9b-AgD">
                                 <rect key="frame" x="155" y="227" width="108" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ywg-Zi-kO8"/>
@@ -981,7 +981,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGF-dz-gEU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGF-dz-gEU">
                                 <rect key="frame" x="244" y="482" width="112" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="112" id="cXT-6t-Jfh"/>
@@ -991,8 +991,11 @@
                                 <state key="normal" title="Leave this home">
                                     <color key="titleColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="leaveHome:" destination="hoj-RG-KvN" eventType="touchUpInside" id="0Du-CA-PDR"/>
+                                </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lgN-6j-tcP">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lgN-6j-tcP">
                                 <rect key="frame" x="155" y="256" width="290" height="181"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1075,6 +1078,7 @@
                     <connections>
                         <outlet property="collectionView" destination="lgN-6j-tcP" id="69b-7X-Kyh"/>
                         <outlet property="homeNameLabel" destination="XsU-ef-0Sn" id="0Qd-Rg-RGZ"/>
+                        <segue destination="z0T-za-9ht" kind="show" identifier="leaveHomeSegue" id="KPg-H7-i8n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k09-g6-jIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1091,7 +1095,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="notificationCell" textLabel="hTI-8w-Bzn" detailTextLabel="zIv-o6-n9y" style="IBUITableViewCellStyleSubtitle" id="snF-Ra-KBP">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="snF-Ra-KBP" id="W0c-3R-EqS">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -1345,7 +1349,7 @@
                                     <constraint firstAttribute="width" constant="140" id="xl6-OG-Yxr"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select recipient(s):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF6-b2-rcg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select recipient(s):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF6-b2-rcg">
                                 <rect key="frame" x="70" y="261" width="112.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1370,7 +1374,7 @@
                                     <constraint firstItem="TSB-2V-koG" firstAttribute="top" secondItem="IXH-gr-qtk" secondAttribute="top" constant="8" id="rT4-V6-iGn"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WwJ-Ve-CiC">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WwJ-Ve-CiC">
                                 <rect key="frame" x="129" y="286" width="343" height="225"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1524,7 +1528,6 @@
         <image name="Broom" width="85" height="85"/>
         <image name="DefaultProfile" width="85" height="85"/>
         <image name="Dishes" width="85" height="85"/>
-        <image name="Email" width="32" height="32"/>
         <image name="Fridge" width="85" height="85"/>
         <image name="HomeLargeBlue" width="128" height="128"/>
         <image name="HomeLargeWhite" width="256" height="256"/>
@@ -1541,17 +1544,18 @@
         <image name="Trash" width="85" height="85"/>
         <image name="UserSmall" width="32" height="32"/>
         <image name="Volume" width="85" height="85"/>
+        <image name="email" width="32" height="32"/>
         <image name="home" width="32" height="32"/>
         <image name="notifications" width="32" height="32"/>
         <image name="ping" width="32" height="32"/>
         <image name="settings" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="KPg-H7-i8n"/>
+        <segue reference="d8d-lX-ulY"/>
         <segue reference="g9H-Ub-QAo"/>
         <segue reference="Efh-X4-xRN"/>
-        <segue reference="Odn-Oe-Q7S"/>
-        <segue reference="yWJ-G8-V9m"/>
-        <segue reference="gh1-Bz-sek"/>
-        <segue reference="xRM-7H-Vbv"/>
+        <segue reference="THY-pO-yZ2"/>
+        <segue reference="fSG-4M-c5l"/>
     </inferredMetricsTieBreakers>
 </document>
