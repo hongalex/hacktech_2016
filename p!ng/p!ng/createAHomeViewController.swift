@@ -13,7 +13,7 @@ class createAHomeViewController: UIViewController {
 
     
     @IBOutlet weak var emailTextField: pingTextField!
-    var namesToDisplay : [String] = ["HI","bye","hihi"];
+    var namesToDisplay = [String]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +25,9 @@ class createAHomeViewController: UIViewController {
         if(emailTextField.text != "")
         {
             namesToDisplay.append(emailTextField.text!)
-           //self.tableView.reloadData();
+           self.tableView.reloadData();
+            emailTextField.text = "";
             
-            NSLog("%i",namesToDisplay.count);
-            for name in namesToDisplay{
-                NSLog(name)
-            }
         }
     }
     override func didReceiveMemoryWarning() {

@@ -534,7 +534,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xqz-Ep-NvX" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
                                 <rect key="frame" x="63" y="178" width="243" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ezw-4q-esL">
                                 <rect key="frame" x="63" y="479" width="363" height="50"/>
@@ -593,6 +593,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="Xqz-Ep-NvX" id="naK-Yc-eaN"/>
+                        <outlet property="tableView" destination="08T-Rt-6xZ" id="Cgz-Bk-T6X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqV-us-fL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
