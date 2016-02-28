@@ -46,13 +46,14 @@
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D9w-Dn-A0L" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
                                 <rect key="frame" x="72" y="247" width="468" height="30"/>
+                                <color key="textColor" red="0.91919191919999998" green="0.91919191919999998" blue="0.91919191919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Www-aS-kys" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
-                                <rect key="frame" x="72" y="307" width="468" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="0.84999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rr5-Di-dKY">
                                 <rect key="frame" x="40" y="362" width="520" height="54"/>
@@ -63,6 +64,10 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="LoginClicked:" destination="9Gf-cz-gec" eventType="touchUpInside" id="dop-5N-dmV"/>
+                                            <segue destination="z0T-za-9ht" kind="show" identifier="LoginSegue" id="0oo-fP-VwU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.1803921568627451" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
@@ -115,6 +120,17 @@
                                     <segue destination="UDl-jM-A3w" kind="show" id="mjg-uk-Hke"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Www-aS-kys" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
+                                <rect key="frame" x="72" y="307" width="468" height="30"/>
+                                <color key="textColor" red="0.91919191920606069" green="0.91919191920606069" blue="0.91919191920606069" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="0.84999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.27843137254901962" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -150,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gD-Un-LeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-630" y="-60"/>
+            <point key="canvasLocation" x="-502" y="-192"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="KHc-lf-PRo">
@@ -175,34 +191,42 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CWi-sG-eWn"/>
                                 </constraints>
+                                <color key="textColor" red="0.91919191919999998" green="0.91919191919999998" blue="0.91919191919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="0.84999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfk-bw-SqG" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
                                 <rect key="frame" x="75" y="232" width="470" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Sbo-wC-Jiy"/>
                                 </constraints>
+                                <color key="textColor" red="0.91919191919999998" green="0.91919191919999998" blue="0.91919191919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="0.84999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a9N-GO-XBS" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
                                 <rect key="frame" x="75" y="282" width="470" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Yfz-69-XIT"/>
                                 </constraints>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.91919191919999998" green="0.91919191919999998" blue="0.91919191919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verify Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXl-rB-NuC" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
-                                <rect key="frame" x="75" y="332" width="470" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="bzV-if-Ba2"/>
-                                </constraints>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="0.84999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male" translatesAutoresizingMaskIntoConstraints="NO" id="7gO-Qt-tAs">
                                 <rect key="frame" x="30" y="130" width="35" height="32"/>
@@ -238,7 +262,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="z0T-za-9ht" kind="show" id="VtF-jv-GPo"/>
+                                            <action selector="RegisterClicked:" destination="UDl-jM-A3w" eventType="touchUpInside" id="8cm-X5-mah"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -255,8 +279,28 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4X2-s9-V04"/>
                                 </constraints>
+                                <color key="textColor" red="0.91919191919999998" green="0.91919191919999998" blue="0.91919191919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="0.84999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verify Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXl-rB-NuC" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
+                                <rect key="frame" x="75" y="332" width="470" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bzV-if-Ba2"/>
+                                </constraints>
+                                <color key="textColor" red="0.91919191919999998" green="0.91919191919999998" blue="0.91919191919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="0.84999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.23529411764705882" green="0.67843137254901964" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
@@ -309,6 +353,7 @@
                         <outlet property="lastNameTF" destination="9do-tk-TR5" id="Cpe-gG-Uw2"/>
                         <outlet property="passwordTF" destination="a9N-GO-XBS" id="lda-tI-K6b"/>
                         <outlet property="verifyPWTF" destination="ZXl-rB-NuC" id="K1h-9y-R3D"/>
+                        <segue destination="z0T-za-9ht" kind="show" identifier="RegisterSegue" id="VGR-3R-8Z9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIe-mA-VtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -478,6 +523,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <segue destination="l5S-YJ-BSr" kind="show" id="Efh-X4-xRN"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EyM-bJ-DNU">
                                 <rect key="frame" x="30" y="79" width="493" height="318"/>
@@ -559,11 +607,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPQ-Sy-MKt" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
-                                <rect key="frame" x="110" y="102.5" width="420" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite roommates to your home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTW-jP-Sh4">
                                 <rect key="frame" x="60" y="147.5" width="194.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
@@ -572,8 +615,14 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xqz-Ep-NvX" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
                                 <rect key="frame" x="60" y="164.5" width="432" height="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="0.84999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhG-PP-cfa">
                                 <rect key="frame" x="500" y="169.5" width="40" height="32"/>
@@ -601,6 +650,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <segue destination="PiM-YC-nA5" kind="show" id="g9H-Ub-QAo"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="08T-Rt-6xZ">
                                 <rect key="frame" x="40" y="209.5" width="520" height="243.5"/>
@@ -632,6 +684,9 @@
                                         <state key="normal" title="create home">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="CreateHomeClicked:" destination="l5S-YJ-BSr" eventType="touchUpInside" id="aqQ-BH-9Gw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.18039215689999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -642,6 +697,19 @@
                                     <constraint firstAttribute="bottom" secondItem="kW3-xE-0KJ" secondAttribute="bottom" constant="10" id="g36-5o-VsX"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPQ-Sy-MKt" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
+                                <rect key="frame" x="110" y="102" width="420" height="30"/>
+                                <color key="backgroundColor" red="0.23529411764705882" green="0.67843137254901964" blue="0.66666666666666663" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.64659286341347011" green="0.67843137254901964" blue="0.66458502566817645" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.91919191919999998" green="0.91919191919999998" blue="0.91919191919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="0.84999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.27843137254901962" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -676,8 +744,10 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="Xqz-Ep-NvX" id="naK-Yc-eaN"/>
+                        <outlet property="homeName" destination="FPQ-Sy-MKt" id="pKp-Yw-6fE"/>
                         <outlet property="redView" destination="ezw-4q-esL" id="EQJ-DT-ZzN"/>
                         <outlet property="tableView" destination="08T-Rt-6xZ" id="Cgz-Bk-T6X"/>
+                        <segue destination="9Gf-cz-gec" kind="show" id="THY-pO-yZ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqV-us-fL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -696,4 +766,9 @@
         <image name="padlock" width="32" height="32"/>
         <image name="plus" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Efh-X4-xRN"/>
+        <segue reference="g9H-Ub-QAo"/>
+        <segue reference="0oo-fP-VwU"/>
+    </inferredMetricsTieBreakers>
 </document>

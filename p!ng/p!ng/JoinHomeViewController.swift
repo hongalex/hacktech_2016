@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import Parse
 
 class JoinHomeViewController: UIViewController {
 
     @IBOutlet weak var homeTableView: UITableView!
     @IBOutlet weak var redView: UIView!
     
-    var houseNames : [String] = ["Test1","Test2","Test3"]//put shit here for display in the table
+    var homes : [PFObject] = [];
+    //var houseNames : [String] = [];// = ["Test1","Test2","Test3"]//put shit here for display in the table
     var selectedName : String = "";
     
     override func viewDidLoad() {
@@ -23,7 +25,11 @@ class JoinHomeViewController: UIViewController {
         redView.layer.masksToBounds = true;
         
         homeTableView.backgroundColor = UIColor.clearColor()
-
+        
+        DataManager.sharedInstance.getInvitedHomes({homes in
+            self.homes = homes!;
+            self.homeTableView.reloadData();
+        })
         // Do any additional setup after loading the view.
     }
 
@@ -34,7 +40,7 @@ class JoinHomeViewController: UIViewController {
     
     func tableView(tableView:UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return houseNames.count
+        return homes.count
     }
     
     func numberOfSectionsInTableView(tableView:UITableView) -> Int {
@@ -47,7 +53,7 @@ class JoinHomeViewController: UIViewController {
         
         let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath) as UITableViewCell
         
-        let name = self.houseNames[indexPath.row]
+        let name = self.homes[indexPath.row]["name"] as! String?
         cell.textLabel!.text = name
         cell.backgroundColor = UIColor.clearColor();
        
@@ -63,7 +69,7 @@ class JoinHomeViewController: UIViewController {
         //let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath) as UITableViewCell
         
         // Configure the cell...
-        selectedName = self.houseNames[indexPath.row]
+        selectedName = (self.homes[indexPath.row]["name"] as! String?)!
         
         /*cell.textLabel?.text = newBookCell
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator

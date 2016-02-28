@@ -16,6 +16,8 @@ class createAHomeViewController: UIViewController {
     @IBOutlet weak var emailTextField: pingTextField!
     var namesToDisplay = [String]();
     
+    @IBOutlet weak var homeName: pingTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,6 +64,25 @@ class createAHomeViewController: UIViewController {
         return cell
     }
 
+    @IBAction func CreateHomeClicked(sender: AnyObject) {
+        DataManager.sharedInstance.createHome(homeName.text!, completion: { success in
+            if(success) {
+                //navigate to next view with segue
+            } else {
+                //Perform actions on fail
+            }
+        })
+        
+        for email in namesToDisplay {
+            DataManager.sharedInstance.inviteEmailToHome(email, completion: { success in
+                if(success) {
+                    //Perform actions on success
+                } else {
+                    //Perform actions on fail
+                }
+            })
+        }
+    }
     
 
     /*
