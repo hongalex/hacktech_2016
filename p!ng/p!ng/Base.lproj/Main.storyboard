@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Gf-cz-gec">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Gf-cz-gec">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="-1194"/>
+            <point key="canvasLocation" x="1793" y="-1394"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="-514"/>
+            <point key="canvasLocation" x="1277" y="-774"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="fnq-EO-cCK">
@@ -130,7 +130,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Www-aS-kys" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
                                 <rect key="frame" x="72" y="307" width="468" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rr5-Di-dKY">
                                 <rect key="frame" x="40" y="362" width="520" height="54"/>
@@ -141,6 +141,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="Login:" destination="9Gf-cz-gec" eventType="touchUpInside" id="pjA-9k-UGY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.1803921568627451" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
@@ -224,6 +227,7 @@
                         <outlet property="buttonView" destination="rr5-Di-dKY" id="cEq-oE-vOi"/>
                         <outlet property="emailTextField" destination="D9w-Dn-A0L" id="Nf6-kr-8SV"/>
                         <outlet property="passwordTextField" destination="Www-aS-kys" id="458-Ag-N3p"/>
+                        <segue destination="z0T-za-9ht" kind="show" identifier="LoginSegue" id="04A-kj-cts"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gD-Un-LeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -269,18 +273,17 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Yfz-69-XIT"/>
                                 </constraints>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verify Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXl-rB-NuC" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
                                 <rect key="frame" x="75" y="332" width="470" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bzV-if-Ba2"/>
                                 </constraints>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male" translatesAutoresizingMaskIntoConstraints="NO" id="7gO-Qt-tAs">
                                 <rect key="frame" x="30" y="130" width="35" height="32"/>
@@ -316,7 +319,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="z0T-za-9ht" kind="show" id="VtF-jv-GPo"/>
+                                            <action selector="Register:" destination="UDl-jM-A3w" eventType="touchUpInside" id="Qwu-Dy-rgf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -387,11 +390,12 @@
                         <outlet property="lastNameTF" destination="9do-tk-TR5" id="Cpe-gG-Uw2"/>
                         <outlet property="passwordTF" destination="a9N-GO-XBS" id="lda-tI-K6b"/>
                         <outlet property="verifyPWTF" destination="ZXl-rB-NuC" id="K1h-9y-R3D"/>
+                        <segue destination="z0T-za-9ht" kind="show" identifier="RegisterSegue" id="Rk1-e4-NPe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIe-mA-VtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="532"/>
+            <point key="canvasLocation" x="-664" y="812"/>
         </scene>
         <!--Create Or Join HouseVC View Controller-->
         <scene sceneID="mGs-hD-mvj">
@@ -497,7 +501,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53w-Rn-g1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1000" y="532"/>
+            <point key="canvasLocation" x="320" y="696"/>
         </scene>
         <!--CreateA Home View Controller-->
         <scene sceneID="jko-6H-sjR">
@@ -520,11 +524,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="QJj-t7-Phk">
                                 <rect key="frame" x="84" y="109" width="33" height="29"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPQ-Sy-MKt" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
-                                <rect key="frame" x="125" y="109" width="301" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invite roommates to your home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTW-jP-Sh4">
                                 <rect key="frame" x="63" y="160" width="238" height="21"/>
                                 <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
@@ -545,6 +544,9 @@
                                         <state key="normal" title="create home">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="CreateHome:" destination="l5S-YJ-BSr" eventType="touchUpInside" id="WAk-1f-i3G"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.18039215689999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -562,6 +564,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="CreateJoinMenu:" destination="l5S-YJ-BSr" eventType="touchUpInside" id="eGZ-bo-7Kd"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="08T-Rt-6xZ">
                                 <rect key="frame" x="63" y="216" width="363" height="243"/>
@@ -588,17 +593,24 @@
                                     <action selector="addEmail:" destination="l5S-YJ-BSr" eventType="touchUpInside" id="KtZ-Ln-Cf6"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPQ-Sy-MKt" customClass="pingTextField" customModule="p_ng" customModuleProvider="target">
+                                <rect key="frame" x="125" y="109" width="301" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.27843137254901962" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="Xqz-Ep-NvX" id="naK-Yc-eaN"/>
+                        <outlet property="nameTF" destination="FPQ-Sy-MKt" id="E7f-Jj-9Eq"/>
                         <outlet property="tableView" destination="08T-Rt-6xZ" id="Cgz-Bk-T6X"/>
+                        <segue destination="z0T-za-9ht" kind="show" identifier="ReturnSegue" id="uis-t0-Q0l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqV-us-fL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1795" y="532"/>
+            <point key="canvasLocation" x="1399" y="396"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -617,7 +629,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1713" y="-886"/>
+            <point key="canvasLocation" x="685" y="-1438"/>
         </scene>
     </scenes>
     <resources>
@@ -633,4 +645,7 @@
         <image name="plus" width="32" height="32"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="uis-t0-Q0l"/>
+    </inferredMetricsTieBreakers>
 </document>

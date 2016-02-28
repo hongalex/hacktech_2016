@@ -28,6 +28,15 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func Login(sender: AnyObject) {
+        DataManager.sharedInstance.loginUser(emailTextField.text!,password: passwordTextField.text!, completion: {successful in
+            if(successful) {
+                self.performSegueWithIdentifier("LoginSegue", sender: sender)
+            } else {
+                self.passwordTextField.text="";
+            }
+        })
+    }
 
     /*
     // MARK: - Navigation
