@@ -11,6 +11,7 @@ import UIKit
 class createAHomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var redView: UIView!
     
     @IBOutlet weak var emailTextField: pingTextField!
     var namesToDisplay = [String]();
@@ -19,6 +20,9 @@ class createAHomeViewController: UIViewController {
         super.viewDidLoad()
 
         self.tableView.backgroundColor = UIColor.clearColor()
+        
+        redView.layer.cornerRadius = 10;
+        redView.layer.masksToBounds = true;
         
     }
 

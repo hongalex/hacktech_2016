@@ -30,6 +30,8 @@
 		300CDC6D1C82377100554089 /* pingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300CDC6C1C82377100554089 /* pingTextField.swift */; };
 		300CDC721C82483F00554089 /* createOrJoinHouseVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300CDC711C82483F00554089 /* createOrJoinHouseVCViewController.swift */; };
 		300CDC741C825AFE00554089 /* createAHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300CDC731C825AFE00554089 /* createAHomeViewController.swift */; };
+		30E6DD7F1C82872A0009A36C /* JoinHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E6DD7E1C82872A0009A36C /* JoinHomeViewController.swift */; };
+		30E6DD831C8294CF0009A36C /* homeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E6DD821C8294CF0009A36C /* homeTableViewCell.swift */; };
 		FA1AADB81C81B98000426B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AADB71C81B98000426B6E /* AppDelegate.swift */; };
 		FA1AADBA1C81B98000426B6E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AADB91C81B98000426B6E /* FirstViewController.swift */; };
 		FA1AADBC1C81B98000426B6E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AADBB1C81B98000426B6E /* SecondViewController.swift */; };
@@ -96,6 +98,8 @@
 		300CDC6C1C82377100554089 /* pingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pingTextField.swift; sourceTree = "<group>"; };
 		300CDC711C82483F00554089 /* createOrJoinHouseVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createOrJoinHouseVCViewController.swift; sourceTree = "<group>"; };
 		300CDC731C825AFE00554089 /* createAHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createAHomeViewController.swift; sourceTree = "<group>"; };
+		30E6DD7E1C82872A0009A36C /* JoinHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinHomeViewController.swift; sourceTree = "<group>"; };
+		30E6DD821C8294CF0009A36C /* homeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeTableViewCell.swift; sourceTree = "<group>"; };
 		FA1AADB41C81B98000426B6E /* p!ng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "p!ng.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1AADB71C81B98000426B6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA1AADB91C81B98000426B6E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				300CDC691C82342D00554089 /* CreateAccountViewController.swift */,
 				300CDC711C82483F00554089 /* createOrJoinHouseVCViewController.swift */,
 				300CDC731C825AFE00554089 /* createAHomeViewController.swift */,
+				30E6DD7E1C82872A0009A36C /* JoinHomeViewController.swift */,
 			);
 			name = setUpViewControllers;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			children = (
 				300CDC6E1C823A0C00554089 /* custom UIComponents */,
 				300CDC6C1C82377100554089 /* pingTextField.swift */,
+				30E6DD821C8294CF0009A36C /* homeTableViewCell.swift */,
 				300CDC6B1C82344C00554089 /* setUpViewControllers */,
 				300CDC621C820B8000554089 /* Resources */,
 				FA1AADB71C81B98000426B6E /* AppDelegate.swift */,
@@ -441,7 +447,9 @@
 				300CDC681C82126B00554089 /* LoginViewController.swift in Sources */,
 				300CDC721C82483F00554089 /* createOrJoinHouseVCViewController.swift in Sources */,
 				FA1AADBC1C81B98000426B6E /* SecondViewController.swift in Sources */,
+				30E6DD7F1C82872A0009A36C /* JoinHomeViewController.swift in Sources */,
 				300CDC741C825AFE00554089 /* createAHomeViewController.swift in Sources */,
+				30E6DD831C8294CF0009A36C /* homeTableViewCell.swift in Sources */,
 				FA1AADE81C81B9C100426B6E /* DataManager.swift in Sources */,
 				FA1AADB81C81B98000426B6E /* AppDelegate.swift in Sources */,
 				FA1AADBA1C81B98000426B6E /* FirstViewController.swift in Sources */,
