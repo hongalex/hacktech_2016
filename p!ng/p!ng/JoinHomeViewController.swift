@@ -14,6 +14,7 @@ class JoinHomeViewController: UIViewController {
     @IBOutlet weak var redView: UIView!
     
     var houseNames : [String] = ["Test1","Test2","Test3"]//put shit here for display in the table
+    var selectedName : String = "";
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,17 +60,18 @@ class JoinHomeViewController: UIViewController {
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath) as UITableViewCell
+        //let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath) as UITableViewCell
         
         // Configure the cell...
-        let newBookCell = self.houseNames[indexPath.row]
-        cell.textLabel?.text = newBookCell
+        selectedName = self.houseNames[indexPath.row]
+        
+        /*cell.textLabel?.text = newBookCell
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         self.homeTableView.reloadData();
         
         cell.backgroundColor = UIColor.clearColor();
         let tempImage = UIImage(named: "home")
-        cell.imageView?.image = tempImage
+        cell.imageView?.image = tempImage*/
         
     }
 
