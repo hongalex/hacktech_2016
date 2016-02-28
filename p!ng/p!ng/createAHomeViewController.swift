@@ -18,6 +18,7 @@ class createAHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.backgroundColor = UIColor.clearColor()
         
     }
 
