@@ -14,25 +14,40 @@ class JoinHomeViewController: UIViewController {
     @IBOutlet weak var homeTableView: UITableView!
     @IBOutlet weak var redView: UIView!
     
-    var homes : [PFObject] = [];
-    //var houseNames : [String] = [];// = ["Test1","Test2","Test3"]//put shit here for display in the table
-    var selectedName : String = "";
+    var homes : [PFObject] = []
+    //var houseNames : [String] = []// = ["Test1","Test2","Test3"]//put shit here for display in the table
+    var selectedName : String = ""
+    var selectedIndex : Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        redView.layer.cornerRadius = 10;
-        redView.layer.masksToBounds = true;
+        redView.layer.cornerRadius = 10
+        redView.layer.masksToBounds = true
         
         homeTableView.backgroundColor = UIColor.clearColor()
         
         DataManager.sharedInstance.getInvitedHomes({homes in
-            self.homes = homes!;
-            self.homeTableView.reloadData();
+            self.homes = homes!
+            self.homeTableView.reloadData()
         })
         // Do any additional setup after loading the view.
     }
 
+    
+    @IBAction func joinHomeClicked(sender: AnyObject) {
+        if (selectedIndex >= 0) {
+            DataManager.sharedInstance.joinHome(homes[selectedIndex], completion: {successful in
+                if (successful) {
+                    //SEGWAY
+                } else {
+                    print("joinHome error")
+                }
+            })
+        }
+        //DataManager.sharedInstance.joinHome
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,8 +74,8 @@ class JoinHomeViewController: UIViewController {
        
         cell.textLabel?.textAlignment = NSTextAlignment.Right;
         cell.textLabel?.textAlignment = NSTextAlignment.Left;
-        cell.textLabel?.font = cell.textLabel?.font.fontWithSize(10);
-        
+        cell.textLabel?.font = cell.textLabel?.font.fontWithSize(16);
+        //cell.textLabel?.textColor = UIColor(red: 211/255.0, green:211/255.0, blue:211/255.0, alpha: 1.0);
         return cell
     }
     
@@ -70,7 +85,7 @@ class JoinHomeViewController: UIViewController {
         
         // Configure the cell...
         selectedName = (self.homes[indexPath.row]["name"] as! String?)!
-        
+        selectedIndex = indexPath.row;
         /*cell.textLabel?.text = newBookCell
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         self.homeTableView.reloadData();

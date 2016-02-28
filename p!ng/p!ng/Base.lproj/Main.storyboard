@@ -66,7 +66,6 @@
                                         </state>
                                         <connections>
                                             <action selector="LoginClicked:" destination="9Gf-cz-gec" eventType="touchUpInside" id="dop-5N-dmV"/>
-                                            <segue destination="z0T-za-9ht" kind="show" identifier="LoginSegue" id="0oo-fP-VwU"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -162,6 +161,7 @@
                         <outlet property="buttonView" destination="rr5-Di-dKY" id="cEq-oE-vOi"/>
                         <outlet property="emailTextField" destination="D9w-Dn-A0L" id="Nf6-kr-8SV"/>
                         <outlet property="passwordTextField" destination="Www-aS-kys" id="458-Ag-N3p"/>
+                        <segue destination="z0T-za-9ht" kind="show" identifier="LoginSegue" id="QFv-6L-FRt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gD-Un-LeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -500,6 +500,9 @@
                                         <state key="normal" title="Join Home">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="joinHomeClicked:" destination="PiM-YC-nA5" eventType="touchUpInside" id="82A-6Q-Es3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.18039215689999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -747,7 +750,6 @@
                         <outlet property="homeName" destination="FPQ-Sy-MKt" id="pKp-Yw-6fE"/>
                         <outlet property="redView" destination="ezw-4q-esL" id="EQJ-DT-ZzN"/>
                         <outlet property="tableView" destination="08T-Rt-6xZ" id="Cgz-Bk-T6X"/>
-                        <segue destination="9Gf-cz-gec" kind="show" id="THY-pO-yZ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqV-us-fL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -769,6 +771,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Efh-X4-xRN"/>
         <segue reference="g9H-Ub-QAo"/>
-        <segue reference="0oo-fP-VwU"/>
+        <segue reference="VGR-3R-8Z9"/>
     </inferredMetricsTieBreakers>
 </document>
