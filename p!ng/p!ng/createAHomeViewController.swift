@@ -20,6 +20,8 @@ class createAHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.setHidesBackButton(true, animated:false)
 
         self.tableView.backgroundColor = UIColor.clearColor()
         
@@ -68,6 +70,7 @@ class createAHomeViewController: UIViewController {
         DataManager.sharedInstance.createHome(homeName.text!, completion: { success in
             if(success) {
                 //navigate to next view with segue
+                self.performSegueWithIdentifier("createHomeSegue", sender: self)
             } else {
                 //Perform actions on fail
             }

@@ -128,7 +128,7 @@ class DataManager {
      *
      * @param A completion handler that takes in the home PFObject and updates the view with it
      */
-    func getHomeName(completion: (home : PFObject?) -> Void) {
+    func getHome(completion: (home : PFObject?) -> Void) {
         let homeQuery = PFQuery(className: "Home")
         homeQuery.whereKey("users", equalTo:PFUser.currentUser()!)
         homeQuery.getFirstObjectInBackgroundWithBlock {
