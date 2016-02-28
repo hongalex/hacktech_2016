@@ -17,9 +17,7 @@ import Bolts
  * Singleton data manager class that the controllers call with a completion handler
  * to make calls to the database and then update the UI after the database call is
  * complete.
- *
- * !!!!!!!!!!!!!!!NOT TESTED!!!!!!!!!!!!!!! - KEVIN WU
- *
+ * 
  * Functions Available (The Completion Handler will take in the return value and is the last parameter)
  * -------------------
  * void Login(String email, String password)
